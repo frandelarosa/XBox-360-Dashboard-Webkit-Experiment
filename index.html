@@ -1,0 +1,146 @@
+<!--
+/*******************************************************************
+*
+*	Author:	Francisco de la Rosa
+*	E-Mail:	frandelarosa@gmail.com
+*	Date: 24-03-11
+*
+*	Description: Webkit Experiment to re-create Xbox 360 Old Slider.
+*
+*	Copyright (c) 2011 Francisco de la Rosa
+*
+*	Permission is hereby granted, free of charge, to any
+*	person obtaining a copy of this software and associated
+*	documentation files (the "Software"), to deal in the
+*	Software without restriction, including without limitation
+*	the rights to use, copy, modify, merge, publish,
+*	distribute, sublicense, and/or sell copies of the
+*	Software, and to permit persons to whom the Software is
+*	furnished to do so, subject to the following conditions:
+*
+*	The above copyright notice and this permission notice
+*	shall be included in all copies or substantial portions of
+*	the Software.
+*
+*	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY
+*	KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+*	WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+*	PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS
+*	OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+*	OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+*	OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+*	SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*
+*
+*
+*
+********************************************************************/
+-->
+
+<html>
+<head>
+	<title>XBox 360 Dashboard Webkit Experiment</title>
+	
+	<link rel="stylesheet" type="text/css" href="test.css"/>
+	
+	<script type="text/javascript" src="jquery-1.4.2.js"></script>
+	<script type="text/javascript" src="jquery.dashboard.js"></script>
+		
+	<script type="text/javascript">
+	
+		$(document).ready(function(){
+				
+			$(".dashboard_panels > div").dashboard();
+			$.dashboard.create();
+			
+			$('body').keydown(function(event) {
+			   			
+	   			if (event.which == '39') {
+	    			$.dashboard.navigate('right');
+	   			}
+	   			
+	   			if (event.which == '37'){
+	   				$.dashboard.navigate('left');
+	   			}
+	   			
+	   			if (event.which == '49'){
+	   				$.dashboard.position('init');
+	   			}
+	   			
+	   			if (event.which == '50'){
+	   				$.dashboard.position('middle');
+	   			}
+   			
+   				if (event.which == '51'){
+   					$.dashboard.position('end');
+   				}
+   				
+   				if (event.which == '77'){
+   					$.dashboard.toggle();
+   				}
+   				
+  			});
+  			
+		
+		});
+		
+		
+	
+	</script>
+
+</head>
+<body>
+
+
+<div class="dashboard_panels">
+
+	<div class="dashboard_panel">
+		<div class="panel_toolbar">
+		</div>
+		<div class="panel_image">
+		</div>
+		<div class="panel_state">
+		</div>
+	</div>
+	
+	<div class="dashboard_panel">
+		<div class="panel_toolbar">
+		</div>
+		<div class="panel_image">
+		</div>
+		<div class="panel_state">
+		</div>
+	</div>
+
+	<div class="dashboard_panel">
+		<div class="panel_toolbar">
+		</div>
+		<div class="panel_image">
+		</div>
+		<div class="panel_state">
+		</div>
+	</div>
+
+	<div class="dashboard_panel">
+		<div class="panel_toolbar">
+		</div>
+		<div class="panel_image">
+		</div>
+		<div class="panel_state">
+		</div>
+	</div>
+
+	<div class="dashboard_panel">
+		<div class="panel_toolbar">
+		</div>
+		<div class="panel_image">
+		</div>
+		<div class="panel_state">
+		</div>
+	</div>
+
+</div>
+
+
+</body>
+</html>
